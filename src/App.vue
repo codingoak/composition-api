@@ -2,6 +2,7 @@
   <section class="container">
     <h2>{{ user.name }}</h2>
     <h3>{{ user.age }}</h3>
+    <button @click="setNewAge">Change Age</button>
   </section>
 </template>
 
@@ -13,10 +14,9 @@ const user = reactive({
   age: 36,
 });
 
-setTimeout(() => {
-  user.name = "John";
-  user.age = 25;
-}, 2000);
+function setNewAge() {
+  user.age = 44;
+}
 </script>
 
 <style>
